@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiyoplane-claude-agent-sdk"
+version = "1.0.0"
+description = "AEAP Composition Boundary Adapter for the Claude Agent SDK. Thin wrapper that attaches the Runtime Decision Point to agent tool invocations — especially useful for coding agents."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "Aiyoplane, Inc.", email = "rashon@aiyoplane.com"}]
+requires-python = ">=3.9"
+keywords = [
+    "aiyo",
+    "aiyoplane",
+    "aeap",
+    "claude",
+    "claude-agent-sdk",
+    "anthropic",
+    "authorization",
+    "runtime-decision-point",
+    "rdp",
+    "execution-receipt",
+    "composition-boundary",
+    "coding-agents",
+    "agent-authorization",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "aiyoplane-mcp-authz>=1.0.1",
+    "claude-agent-sdk>=0.1.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0", "pytest-asyncio>=0.21"]
+
+[project.urls]
+Homepage = "https://aiyoplane.com"
+Documentation = "https://github.com/aiyoplane/claude-agent-sdk-python"
+Repository = "https://github.com/aiyoplane/claude-agent-sdk-python"
+Issues = "https://github.com/aiyoplane/claude-agent-sdk-python/issues"
+"Trust Surface" = "https://aiyoplane.com/trust"
+"AEAP Specification" = "https://github.com/aiyoplane/aeap"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+aiyoplane_claude_agent_sdk = ["py.typed"]
